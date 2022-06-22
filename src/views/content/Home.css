@@ -1,0 +1,131 @@
+.Container {
+    display: flex;
+}
+
+.Title {
+    font-family: 'OpenSansBold';
+    font-size: 1.8vw;
+    margin-left: 5.7vw;
+    margin-top: 5.7vh;
+    color: #310660;
+}
+
+.Watch {
+    margin-left: 5.7vw;
+}
+
+.Watch h3 {
+    font-family: 'OpenSansBold';
+    font-size: 1.8vw;
+    color: #310660;
+    margin-top: 0.2vh;
+}
+
+.KeepContainer {
+    margin-top: -0.2vh;
+    border-radius: 5px;
+    border: 3px dashed rgba(49, 6, 96, .3);
+    min-width: 60vw;
+    padding: 20px 0px 0px 35px;
+}
+
+.KeepContainer h2 {
+    font-family: 'OpenSansBold';
+    font-size: 1.8vw;
+    margin-top: 0.5vh;
+    color: #310660;
+}
+
+.KeepContainer h4 {
+    font-family: 'OpenSansLight';
+    font-size: 1.3vw;
+    margin-top: -3vh;
+    margin-bottom: 1vh;
+    color: #310660;
+}
+
+.Review {
+    margin-top: -4vh;
+    margin-left: 5.7vw;
+}
+
+.Review h5 {
+    font-family: 'OpenSansBold';
+    font-size: 1.8vw;
+    color: #310660;
+}
+
+.ReviewContainer {
+    margin-top: -5vh;
+    border-radius: 5px;
+    border: 3px dashed rgba(49, 6, 96, .3);
+    min-width: 65vw;
+    padding: 20px 20px 0px 30px;
+}
+
+.ReviewContainer p {
+    font-family: 'OpenSansBold';
+    font-size: 1.3vw;
+    color: #310660;
+}
+
+.Tematics {
+    margin-top: 12vh;
+}
+
+.Tematics h3 {
+    font-family: 'OpenSansBold';
+    font-size: 1.8vw;
+    color: #310660;
+    margin-left: 2vw;
+    margin-bottom: 5vh;
+}
+
+.Themes h4 {
+    font-family: 'OpenSansBold';
+    font-size: 1.3vw;
+    color: #310660;
+    margin-left: 0px;
+    margin-top: -2vh;
+    padding: 5px;
+}
+
+.Themes a {
+    text-decoration: none;
+}
+
+.Themes {
+    margin-left: 2vw;
+}
+
+.Biologia {
+    background-color: #ae86d8;
+}
+
+.Quimica {
+    background-color: #b0e0e6;
+}
+
+.Fisica {
+    background-color: #eee8aa;
+}
+
+.Geografia {
+    background-color: #afeeaa;
+}
+
+.Matematica {
+    background-color: #acaaee;
+}
+
+.Historia {
+    background-color: #eaaaee;
+}
+
+.Filosofia {
+    background-color: #fcbb7b;
+}
+
+.Linguagens {
+    background-color: #ff9b9b;
+}

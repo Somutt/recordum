@@ -1,0 +1,47 @@
+h2 {
+    font-family: 'OpenSansBold';
+    color: #3c3c3c;
+    font-size: 2vw;
+}
+
+h3 {
+    font-family: 'OpenSansLight';
+    color: #3c3c3c;
+    font-size: 1vw;
+    margin-top: -1vh;
+}
+
+.Login {
+    margin-left: 5vw;
+}
+
+.LoginMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0vw;
+}
+
+.InputsEndLogin {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    float: left;
+    border: none;
+    font-size: 1.2vw;
+    font-family: 'OpenSansBold';
+    color: #ffffff;
+    background-color: #310660;
+    border-radius: 5px;
+    padding: 1.2vh 1.2vw;
+    margin-left: 13.5vw;
+}
+
+button:hover {
+    cursor: pointer;
+}

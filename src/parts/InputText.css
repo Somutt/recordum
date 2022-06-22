@@ -1,0 +1,16 @@
+input {
+    font-family: 'OpenSansLight';
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    font-size: 13pt;
+    margin-bottom: 5vh;
+}
+
+label {
+    font-family: 'OpenSansLight';
+    color: #484848;
+    font-size: 13pt;
+    padding: 0.5vh 0vw;
+}
