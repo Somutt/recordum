@@ -4,7 +4,6 @@ import {Routes, Route} from "react-router-dom";
 import Login from "../../views/content/Login";
 import Home from "../../views/content/Home"
 
-
 import "./Initial.css"
 
 const Initial = props => (

@@ -1,3 +1,67 @@
+.Home h2 {
+    font-family: 'OpenSansBold';
+    font-size: 1.5rem;
+    color: #310660;
+}
+
+.Home h3 {
+    font-family: 'OpenSansBold';
+    color: #310660;
+    font-size: 1.4rem;
+    margin: 0.2vh 0;
+}
+
+.Home h4 {
+    font-family: 'OpenSansLight';
+    color: #310660;
+    font-size: 1rem;
+    margin-top: 0.2vh;
+}
+
+#Welcome {
+    margin-left: 5vw;
+}
+
+.Container {
+    display: flex;
+    margin-left: 5vw;
+}
+
+.VideosContainer {
+    width: 68vw;
+}
+
+.Thematics {
+    margin-left: 2vw;
+}
+
+#ReviewText {
+    margin: 1vh;
+}
+
+.KeepWatchingContainer {
+    border-radius: 5px;
+    border: 3px dashed rgba(49, 6, 96, .3);
+    min-width: 60vw;
+    padding: 20px 0px 0px 35px;
+}
+
+.ReviewContainer {
+    border-radius: 5px;
+    border: 3px dashed rgba(49, 6, 96, .3);
+    min-width: 60vw;
+    padding: 20px 0px 0px 35px;
+}
+
+.Home p {
+    font-family: 'OpenSansBold';
+    color: #310660;
+    font-size: 0.8rem;
+    margin-top: 0.1vh;
+    margin-bottom: 0.2vh;
+}
+
+/*
 .Container {
     display: flex;
 }
@@ -19,14 +83,6 @@
     font-size: 1.8vw;
     color: #310660;
     margin-top: 0.2vh;
-}
-
-.KeepContainer {
-    margin-top: -0.2vh;
-    border-radius: 5px;
-    border: 3px dashed rgba(49, 6, 96, .3);
-    min-width: 60vw;
-    padding: 20px 0px 0px 35px;
 }
 
 .KeepContainer h2 {
@@ -129,3 +185,4 @@
 .Linguagens {
     background-color: #ff9b9b;
 }
+*/

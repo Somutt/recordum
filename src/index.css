@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url("./fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url("./fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Adlinnaka';
+    src: url("./fonts/Adlinnaka-BoldDemo.ttf");
+}
+
 body {
     margin: 0;
 }

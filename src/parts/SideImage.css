@@ -1,7 +1,8 @@
 .SideImage {
-    min-width: 55vw;
-    background-color: black;
-    /* background-image: url("../../imgs/bgbio.png");
-    background-size: cover;
-    background-repeat: no-repeat; */
+    align-self: flex-end;
+}
+
+.SideImage img {
+    margin-left: 4vw;
+    height: 100vh;
 }

@@ -1,17 +1,27 @@
-h2 {
+.Login {
+    max-width: 45vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Login h2 {
     font-family: 'OpenSansBold';
     color: #3c3c3c;
     font-size: 2vw;
 }
 
-h3 {
+.Login h3 {
     font-family: 'OpenSansLight';
     color: #3c3c3c;
     font-size: 1vw;
     margin-top: -1vh;
 }
 
-.Login {
+.Login a {
+    text-decoration: none;
+}
+
+.LoginPage {
     margin-left: 5vw;
 }
 
@@ -23,25 +33,28 @@ h3 {
 
 .InputsEndLogin {
     display: flex;
-    align-items: center;
+    justify-content: end;
 }
 
-a {
-    text-decoration: none;
+.InputsEndLogin a {
+    color: #ffffff;
 }
 
-button {
-    float: left;
+.InputsEndLogin button {
     border: none;
-    font-size: 1.2vw;
+    font-size: 1.5rem;
     font-family: 'OpenSansBold';
     color: #ffffff;
     background-color: #310660;
-    border-radius: 5px;
-    padding: 1.2vh 1.2vw;
-    margin-left: 13.5vw;
+    border-radius: 10px;
+    padding: 1.8vh 3vw;
+    margin-bottom: 5vh;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+.Login p {
+    text-align: center;
 }
