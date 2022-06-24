@@ -10,7 +10,7 @@ import './Menu.css'
 
 const expandMenuOnClick = () => {
     var teste = document.querySelector('.ExpandMenu')
-    if (teste.style.maxHeight == '0px') {
+    if (teste.style.maxHeight == '0px' || teste.style.maxHeight == '') {
         teste.style.maxHeight = '87.4vh';
     } else {
         teste.style.maxHeight = '0px';
@@ -22,10 +22,10 @@ const Menu = props => {
         <header>
             <div className="Menu">
                 <div className="LeftMenu">
-                    <a className="Logo"><Link to="/">Reco</Link></a>
+                    <a className="Logo"><Link to="/Home">Reco</Link></a>
                     <input type="text" />
-                    <a href="#"><Link to="#">Temas</Link><img className="ArrowDown" src={arrowdown} width="25" height="25" /></a>
-                    <a href="#"><Link to="#">Testes</Link><img className="ArrowDown" src={arrowdown} width="25" height="25" /></a>
+                    <Link to="#">Temas<img className="ArrowDown" src={arrowdown} width="25" height="25" /></Link>
+                    <Link to="#">Testes<img className="ArrowDown" src={arrowdown} width="25" height="25" /></Link>
                 </div>
                 <a className="Premium"><Link to="/">Premium</Link></a>
                 <div className="RightMenu">
@@ -39,7 +39,7 @@ const Menu = props => {
             <div className="ExpandMenu">
                 <div className="ExpandLeft">
                     <h1>Perfil</h1>
-                    <a href="#"><Link to="#"><h2>Sobre o</h2><h1>Recordum</h1></Link></a>
+                    <a href="#"><Link to="/About"><h2>Sobre o</h2><h1>Recordum</h1></Link></a>
                 </div>
                 <div className="ExpandMiddle">
                     <div className="InfoPerson">

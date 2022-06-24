@@ -1,0 +1,94 @@
+.About {
+    height: 87.4vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #20003e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    font-family: 'Adlinnaka';
+    padding: 0;
+    padding: 0 3.3vw 0 3.3vw;
+}
+
+.AboutLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 21.2vw;
+    height: 87.4vh;
+}
+
+.AboutLeft h1 {
+    font-family: 'Adlinnaka';
+    font-size: 2.5vw;
+    color: white;
+    margin: 0 0 4.81vh 0;
+}
+
+.AboutLeft h2 {
+    font-size: 2.1vw;
+    color: white;
+    margin: 0 0 0 0;
+}
+
+.AboutMiddle {
+    display: flex;
+    width: 51.8vw;
+    height: 87.4vh;
+    flex-direction: column;
+}
+
+.AboutMiddle div{
+    width: 38.9vw;
+    height: 17.1vh;
+    margin-top: 7vh;
+}
+
+.AboutMiddle div h1 {
+    font-family: 'OpenSans-Bold';
+    font-size: 2.7vh;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.AboutMiddle div h2 {
+    font-size: 1.9vh;
+    color: white;
+    margin: 3,7vh 0 0 0;
+}
+
+.AboutRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: end;
+    width: 21.2vw;
+    height: 87.4vh;
+}
+
+.AboutRight div{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-content: end;
+}
+
+.AboutRight a {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    color:#20003e;
+    background-color: white;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 197px;
+    padding: 1.75vh 0;
+    margin: 0 .55vw 4.81vh 19px;
+    justify-content: center;
+    align-content: center;
+    font-size: 19px;
+}
