@@ -10,7 +10,7 @@ import './Menu.css'
 
 const expandMenuOnClick = () => {
     var teste = document.querySelector('.ExpandMenu')
-    if (teste.style.maxHeight == '0px') {
+    if (teste.style.maxHeight == '0px' || teste.style.maxHeight == '') {
         teste.style.maxHeight = '87.4vh';
     } else {
         teste.style.maxHeight = '0px';
