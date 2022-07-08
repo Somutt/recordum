@@ -1,28 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React,{Component, useEffect, useState } from "react";
 
-const Teste = props => {
 
-  const [items, setItems] = useState([]);
+class Teste extends Component{
+  
+  constructor(props){
+    super(props);
+    this.state = {
+      items:[],
+      isLoaded: false,
+    }
+  }
 
-  useEffect(() => {
+  componentDidMount(){
     fetch("https://recordum-app.herokuapp.com/conteudo/eixos/", {
         "method": "GET",
         "headers": {} ,
       })
       .then(res => res.json())
-      .then(response => {
-        setItems(response);
+      .then(json => {
+        this.setState({
+          isLoaded: true,
+          eixos: json
+        })
       })
       .catch(err => { console.log(err); 
       });
-  }, [])
+  }
+
+  render() {
+
+    var { isLoaded, eixos } = this.state;
+    
+    if(!isLoaded) {
+      return <div>Carregando...</div>
+    }
+
+    else {
 
       return (
-            <div>
-                <h1>{items[1].nome}</h1>
-            </div>
-        )
-
+        <div>
+          <ul>
+            {eixos.map(eixo => (
+              <li key={eixo.id}>{eixo.id} - {eixo.nome}</li>
+            ))}
+          </ul>
+        </div>
+    )
+    }
+  }
 }
 
 export default Teste;
+
