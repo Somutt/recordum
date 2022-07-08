@@ -26,7 +26,6 @@ const Login = props => {
             <SideImage />
         </div>
     )
-
 }
 
 export default Login;
