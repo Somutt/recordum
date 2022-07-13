@@ -10,7 +10,7 @@ const InputText = props => {
     return (
         <div className="InputText">
             <label classname="Inputclass" for="inputtext">{props.label}</label><br></br><br></br>
-            <input clasName={props.className} id="inputtext" type={props.type} maxLength={props.length} size={props.size}
+            <input clasName={props.className} id={props.id} type={props.type} maxLength={props.length} size={props.size}
                 value={inputtext} onChange={ e => setInputText(e.target.value) }></input>
         </div>
     )

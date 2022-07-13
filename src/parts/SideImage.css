@@ -1,8 +1,10 @@
 .SideImage {
+    display: flex;
     align-self: flex-end;
 }
 
 .SideImage img {
     margin-left: 4vw;
     height: 100vh;
+    width: 55vw;
 }

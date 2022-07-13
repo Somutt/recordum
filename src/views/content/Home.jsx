@@ -7,7 +7,10 @@ import Themes from "../../parts/Themes.jsx"
 import './Home.css'
 
 import placeholder from '../../imgs/placeholder.jpg'
+<<<<<<< HEAD
 import backgroundgen from "../../imgs/backgroundgen.png"
+=======
+>>>>>>> 3c9aa80 (integracao login e cadastro)
 
 class Home extends Component{
   
@@ -29,7 +32,7 @@ class Home extends Component{
             .then(json => {
             this.setState({
                 isLoaded: true,
-                eixos: json
+                eixos: json 
             })
             })
             .catch(err => { console.log(err); 
