@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import React, {Component, useEffect} from "react";
+import { ReactSession }  from 'react-client-session';
 import { Link } from "react-router-dom";
 
 import bell from '../../imgs/bell.png';
@@ -8,7 +9,6 @@ import creditcard from '../../imgs/credit-card.png';
 
 import './Menu.css'
 
-
 const expandMenuOnClick = () => {
     var teste = document.querySelector('.ExpandMenu')
     if (teste.style.maxHeight == '0px' || teste.style.maxHeight == '') {
@@ -16,6 +16,10 @@ const expandMenuOnClick = () => {
     } else {
         teste.style.maxHeight = '0px';
     }
+}
+
+const leave = () => {
+    ReactSession.set("id", "0");
 }
 
 class Menu extends Component{
@@ -30,7 +34,7 @@ class Menu extends Component{
     }
   
     componentDidMount(){
-        var id = "2"
+        var id = ReactSession.get("id")
         var url = "https://recordum-app.herokuapp.com/usuario/informacao/" + id
         fetch(url, {
             "method": "GET",
@@ -168,7 +172,7 @@ class Menu extends Component{
                             <img src={creditcard} width="455" height="395" />
                         </div>
                         <div className="EditProfile">
-                            <Link to="#">Resetar Senha</Link>
+                            <Link onClick={leave} to="/">Sair</Link>
                             <Link to="#">Editar Perfil</Link>
                         </div>
                     </div>

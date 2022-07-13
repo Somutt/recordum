@@ -4,7 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Login from "../../views/content/Login";
 import Home from "../../views/content/Home"
 import About from "../../views/content/About"
-import Teste from "../../views/content/Test";
+import Cadastro from "../../views/content/Cadastro";
 
 import "./Initial.css"
 
@@ -16,7 +16,7 @@ const Initial = props => (
                 <Route path="/" element={<Login />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/teste" element={<Teste />} />
+                <Route path="/cadastro" element={<Cadastro />} />
             </Routes>
         </main>
     )

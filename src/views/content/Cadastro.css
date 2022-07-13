@@ -1,46 +1,56 @@
-.Login {
+.Cadastro {
     width: 100vw;
     display: flex;
     justify-content: space-between;
 }
 
-.Login h2 {
+.Cadastro h2 {
     font-family: 'OpenSansBold';
     color: #3c3c3c;
     font-size: 2vw;
 }
 
-.Login h3 {
+.Cadastro h3 {
     font-family: 'OpenSansLight';
     color: #3c3c3c;
     font-size: 1vw;
     margin-top: -1vh;
 }
 
-.Login a {
+.Cadastro a {
     text-decoration: none;
 }
 
-.LoginPage {
+.CadastroPage {
     margin-left: 5vw;
 }
 
-.LoginMenu {
+.CadastroMenu {
     display: flex;
     flex-direction: column;
     padding: 3vh 0vw;
 }
 
-.InputsEndLogin {
+.CadastroName {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 
-.InputsEndLogin a {
+.CadastroForm{
+    display: flex;
+    flex-direction: row;
+}
+
+.InputsEndCadastro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.InputsEndCadastro button a {
     color: #ffffff;
 }
 
-.InputsEndLogin button {
+.InputsEndCadastro button {
     border: none;
     font-size: 1.5rem;
     font-family: 'OpenSansBold';
@@ -55,6 +65,21 @@ button:hover {
     cursor: pointer;
 }
 
-.Login p {
+.Cadastro p {
     text-align: center;
+}
+
+.Complemento {
+    display: none;
+}
+
+.Inicial {
+    display: flex;
+}
+
+.alert {
+    position: absolute;
+    color: red;
+    display: none;
+    transform: translateY(-300%);
 }
