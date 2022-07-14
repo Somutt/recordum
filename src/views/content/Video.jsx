@@ -18,7 +18,7 @@ const Video = props => {
             <div className="VideoDivs">
                 <div className="ContainerVideo">
                     <h2>Introdução à Genética - Conceitos Iniciais</h2>
-                    <iframe className="VideoPlayer" src="https://www.youtube.com/embed/RP3_Tp125kI" title="Genética-Conceitos Iniciais" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe className="VideoPlayer" src="https://www.youtube.com/embed/RP3_Tp125kI" title="Genética-Conceitos Iniciais" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     <div className="ReviewsOptions"> <img src={rating2} alt="review stars" width="80" height="80" /> <img src={erro} alt="warning sign for report" width="30" height="30"/> </div>
                 </div>
                 <div className="InfoContainer">
@@ -28,7 +28,7 @@ const Video = props => {
                             <img src={fastforward} alt="double arrow sign" width="20" height="20" /> 
                             <span>Genética</span>
                         </div>
-                        <Link to="/Review"><img clasName="InfoContainerReview" src={rating} alt="notes for review" width="50" height="50" /> </Link>
+                        <Link to="/Review"><img className="InfoContainerReview" src={rating} alt="notes for review" width="50" height="50" /> </Link>
                     </div>
                     <p id="Int">1.INTRODUÇÂO À GENÉTICA</p>
                     <p id="Sub" >Introdução à Genética - Conceitos Iniciais</p>

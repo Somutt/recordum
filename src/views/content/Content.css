@@ -1,0 +1,62 @@
+.ContentScreen {
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url("../../imgs/bgbio.png");
+    background-size: cover;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.ContentScreen a {
+    text-decoration: none;
+}
+
+.ContentScreen .ContentHeader {
+    font-family: 'OpenSansLight';
+    font-size: 1.2rem;
+    color: #310660;
+    margin: 6vh 0 0 6vw;
+}
+
+.ContentScreen .ContentSectionTitle {
+    font-family: 'OpenSansBold';
+    font-size: 1.2rem;
+    color: #310660;
+    margin: 4vh 7vw 0 6vw;
+    padding: 5px;
+    background-color: #c89cf7;
+}
+
+.ContentScreen .ContentVideosContainer {
+    margin-right: 8.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ContentScreen .VideosContainerLeft {
+    display: flex;
+    align-items: center;
+    margin: 2vh 0 0 8vw;
+    padding: 5px;
+}
+
+.ContentScreen .VideosContainerLeft span {
+    font-family: 'OpenSansLight';
+    font-size: 0.8rem;
+    color: #310660;
+    margin-left: 2vw;
+}
+
+.ContentScreen .VideosContainerRight {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.ContentScreen .VideosContainerRight span {
+    font-family: 'OpenSansLight';
+    font-size: 0.8rem;
+    color: #310660;
+}
+
+.ContentScreen .VideosContainerRight img {
+    margin-left: 10px;
+}

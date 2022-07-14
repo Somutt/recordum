@@ -8,7 +8,6 @@ import Logo from "../../parts/Logo.jsx"
 import InputText from "../../parts/InputText.jsx"
 
 import './Login.css';
-import App from "../App.jsx";
 
 function Login() {
     useEffect(() => {

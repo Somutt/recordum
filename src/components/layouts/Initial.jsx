@@ -7,6 +7,7 @@ import About from "../../views/content/About";
 import Video from "../../views/content/Video";
 import Review from "../../views/content/Review";
 import Cadastro from "../../views/content/Cadastro";
+import Content from "../../views/content/Content";
 
 import "./Initial.css"
 
@@ -21,6 +22,7 @@ const Initial = props => (
                 <Route path="/video" element={<Video />} />
                 <Route path="/review" element={<Review />} />
                 <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/content" element={<Content />} />
             </Routes>
         </main>
     )
