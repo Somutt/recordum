@@ -20,7 +20,6 @@ const Review = props => {
 
     const toggleVisibility = () => {
         setActive(!isActive);
-        console.log(document.getElementById("content").classList);
     }
 
     return (

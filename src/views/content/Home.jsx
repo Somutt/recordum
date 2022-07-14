@@ -57,7 +57,7 @@ class Home extends Component{
                     <div className="VideosContainer">
                         <h2>Continue assistindo</h2>
                         <div className="KeepWatchingContainer">
-                            <img className="Placeholder" src={placeholder} alt="Video for keep watching" width='240' height='140' />
+                            <Link to="/Video" ><img className="Placeholder" src={backgroundgen} alt="Video for keep watching" width='240' height='140' /></Link>
                             <h3>Int. à genética</h3>
                             <h4>Genética | Biologia</h4>
                         </div>
