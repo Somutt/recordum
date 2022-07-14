@@ -1,6 +1,6 @@
 import React, {Component, useEffect} from "react";
 import { ReactSession }  from 'react-client-session';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 import bell from '../../imgs/bell.png';
 import reading from '../../imgs/reading.png';
@@ -138,6 +138,10 @@ class Menu extends Component{
                                 <h2>{infoSchool.universidade}</h2>
                             </div>
                         </div> 
+        }
+
+        if (ReactSession.get("id") == 0 || ReactSession.get("id") == undefined){
+            return <Navigate to='/'/>
         }
 
         return (
