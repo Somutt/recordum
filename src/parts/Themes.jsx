@@ -18,7 +18,7 @@ const Themes = props => {
     
     return (
         <div className="Themes">
-            <button style={{ background: color[props.color%7]}}><Link to={`/eixos/${props.color}`}>{props.nome}</Link></button>
+            <button style={{ background: color[props.color%7]}}><Link to={`/eixos/${props.color}?nome=${props.nome}`}>{props.nome}</Link></button>
         </div>
     )
 

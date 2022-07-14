@@ -1,59 +1,57 @@
-import React, {useEffect}  from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect, useState}  from "react";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ReactSession }  from 'react-client-session';
 
 import Menu from "../../components/Header/Menu"
 import placeholder from '../../imgs/placeholder.jpg'
 
 import './Eixo.css';
-import App from "../App.jsx";
 
-function Login() {
-    useEffect(() => {
-    })
+function Eixos() {
+    const [searchParams] = useSearchParams()
+    let {eixoId} = useParams()
+    
+    const [eixos,setEixos] = useState([])
 
-    let navigate = useNavigate()
-
-    const handleClick = async () => {
-        var email = document.querySelector("#email")
-        var password = document.querySelector("#password")
-
-        const response = await fetch("https://recordum-app.herokuapp.com/usuario/login/", {
-            "method": "POST",
-            "headers": {"Content-Type":"application/json"} ,
-            "body":JSON.stringify({
-                "username":email.value,
-                "password":password.value,
-            })
+    const fetchData = async () =>{ 
+        const response = await fetch("https://recordum-app.herokuapp.com/conteudo/disciplinas/" + eixoId, {
+            "method": "GET",
+            "headers": {} ,
         })
         if (response.ok){
-            let responseJson = await response.json()
-            ReactSession.set("id", responseJson.user_id);
-            navigate('/home') 
-        } else {
-            var alert = document.querySelector('.alert');
-            alert.style.display = "flex";  
+            setEixos( await response.json())     
         }
     }
+
+    useEffect( () => {
+        fetchData()
+    })
     
     return (
         <div>
             <Menu />
             <div className="Eixo">
-                <h1>BIOLOGIA</h1>
+                <h1>{searchParams.get("nome")}</h1>
                 <div className="EixoDivisao">
-                    <div className="Disciplina">
-                        <img src={placeholder} alt="Video for keep watching"/>
-                        <p>Citologia</p>
-                        <div>
-                            <p>09 Aulas |</p>
-                            <p>1h 10</p>
-                        </div>
-                    </div>
+                    {eixos.map((eixo) => <Card nome={eixo.nome} thumb={eixo.thumb} />)}
                 </div>
             </div>   
         </div>
     )
 }
 
-export default Login;
+function Card({nome, thumb}) {
+    let url =  "https://recordum-app.herokuapp.com"
+    return <Link to="/Content">
+        <div className="Disciplina">
+                <img src={url + thumb} alt="Video for keep watching"/>
+                <p>{nome}</p>
+                <div>
+                    <p>09 Aulas |</p>
+                    <p>1h 10</p>
+                </div>
+            </div>
+    </Link>
+}
+
+export default Eixos;
