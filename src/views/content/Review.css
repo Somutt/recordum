@@ -1,0 +1,117 @@
+.ReviewDivs {
+    display: flex;
+    margin: 0 0 0 5vw;
+}
+
+.Review h2 {
+    font-family: 'OpenSansBold';
+    font-size: 1.5rem;
+    color: #310660;
+}
+
+.Review h3 {
+    font-family: 'OpenSansLight';
+    font-size: 1.1rem;
+    color: #310660;
+    padding: 0px 0px 0px 25px;
+    margin-bottom: 1px;
+}
+
+.Review span {
+    font-family: 'OpenSansBold';
+    font-size: 1.2rem;
+    color: #310660;
+    margin-left: 10px;
+}
+
+.Review a {
+    text-decoration: none;
+}
+
+.Review #Int {
+    font-family: 'OpenSansBold';
+    font-size: 1rem;
+    color: gray;
+    padding: 0px 0px 0px 25px;
+}
+
+.Review #Sub {
+    font-family: 'OpenSansBold';
+    font-size: 0.8rem;
+    color: #310660;
+    padding: 0px 0px 0px 25px;
+}
+
+.Review .ReviewImage {
+    width: 68vw;
+    height: 80vh;
+    border: 5px solid #310660;
+    background-image: url("../../imgs/backgroundgen.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.Review .BottomButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Review .BottomButtonsLeft img {
+    padding: 8px 0px 0px 10px;
+}
+
+.Review .popup1 {
+    cursor: pointer;
+    position: absolute;
+    left: 15vw;
+    top: 15vh;
+}
+
+.Review .popup2 {
+    cursor: pointer;
+    position: absolute;
+    left: 6vw;
+    top: 59vh;
+}
+
+.Review .popup3 {
+    cursor: pointer;
+    position: absolute;
+    left: 30vw;
+    top: 40vh;
+}
+
+.Review .popup4 {
+    cursor: pointer;
+    position: absolute;
+    left: 43vw;
+    top: 8vh;
+}
+
+.Review .popup1 #content {
+    font-family: 'OpenSansBold';
+    font-size: 0.5em;
+    color: #310660;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 3px;
+    z-index: 1;
+}
+
+#contentContainer {
+    border: 2px solid #310660;
+    border-left: 3px solid #310660;
+    background-color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+.Review .ReviewButtons {
+    font-family:'OpenSansBold';
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #310660;;
+}
