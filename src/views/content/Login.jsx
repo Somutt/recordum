@@ -1,5 +1,5 @@
-import React, {Component}  from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import React, {useEffect}  from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ReactSession }  from 'react-client-session';
 
 import SideImage from "../../parts/SideImage.jsx";
@@ -10,76 +10,55 @@ import InputText from "../../parts/InputText.jsx"
 import './Login.css';
 import App from "../App.jsx";
 
-class Login extends Component{  
-    constructor(props){
-      super(props);
-      this.state = {
-        items:[]
-      }
-    }
-
-    componentDidMount(){
+function Login() {
+    useEffect(() => {
         ReactSession.set("id", "0");
-    }
+    })
 
-    render() {    
-        const { navigate } = this.props;    
-        const handlesOnClick = () =>{
-            var email = document.querySelector("#email")
-            var password = document.querySelector("#password")
-            fetch("https://recordum-app.herokuapp.com/usuario/login/", {
-                "method": "POST",
-                "headers": {"Content-Type":"application/json"} ,
-                "body":JSON.stringify({
-                    "username":email.value,
-                    "password":password.value,
-                })
-            })
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    user: json
-                })
-            })
-            .catch(err => { console.log(err); 
-            });
-            var { user } = this.state;
-            ReactSession.set("id", user.user_id);
-            if (ReactSession.get("id") != "0" && ReactSession.get("id") != undefined){
-                navigate('/home')
-            }         
-        }
+    let navigate = useNavigate()
 
-        if (ReactSession.get("id") != "0" && ReactSession.get("id") != undefined){
-            return (
-                <Navigate to='/home'/>
-            )
+    const handleClick = async () => {
+        var email = document.querySelector("#email")
+        var password = document.querySelector("#password")
+
+        const response = await fetch("https://recordum-app.herokuapp.com/usuario/login/", {
+            "method": "POST",
+            "headers": {"Content-Type":"application/json"} ,
+            "body":JSON.stringify({
+                "username":email.value,
+                "password":password.value,
+            })
+        })
+        if (response.ok){
+            let responseJson = await response.json()
+            ReactSession.set("id", responseJson.user_id);
+            navigate('/home') 
         } else {
-            ReactSession.set("id", "0");
-            return (
-                <div className="Login">
-                <div className="LoginPage">
-                    <h1><Logo /></h1>
-                    <h2>Entre no Recordum ou<br></br> <Link to= "/cadastro">Cadastre-se</Link></h2>
-                    <h1 className="alert">Cadastro Incorreto</h1>
-                    <div className="LoginMenu">
-                        <InputText id="email" label="Endereço de email" type="email" length="30" size="60" />
-                        <InputText id="password" label="Senha" type="password" length="15" size="60" />
-                        <div className="InputsEndLogin">
-                            <button onClick={handlesOnClick}>Entrar</button>
-                        </div>
-                        <p>Problemas para conectar? <Link to="/" >Redefina sua senha</Link></p>
-                    </div>
-                </div>
-                <SideImage />
-            </div>
-            )
+            var alert = document.querySelector('.alert');
+            alert.style.display = "flex";  
         }
     }
-  }
 
-export default function(props) {
-    const navigate = useNavigate();
-  
-    return <Login {...props} navigate={navigate} />;
-  }
+    ReactSession.set("id", "0");
+    
+    return (
+        <div className="Login">
+        <div className="LoginPage">
+            <h1><Logo /></h1>
+            <h2>Entre no Recordum ou<br></br> <Link to= "/cadastro">Cadastre-se</Link></h2>
+            <div className="LoginMenu">
+                <p className="alert">*Email ou senha incorretos</p>
+                <InputText id="email" label="Endereço de email" type="email" length="30" size="60" />
+                <InputText id="password" label="Senha" type="password" length="15" size="60" />
+                <div className="InputsEndLogin">
+                    <button onClick={handleClick}>Entrar</button>
+                </div>
+                <p>Problemas para conectar? <Link to="/" >Redefina sua senha</Link></p>
+            </div>
+        </div>
+        <SideImage />
+    </div>
+    )
+}
+
+export default Login;
