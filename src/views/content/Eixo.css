@@ -1,0 +1,111 @@
+.Eixo{
+    margin: 10vh 6.25vw 10vh 6.25vw ;
+}
+
+.EixoDivisao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.8vw 3.8vw;
+    padding-top: 3.8vw;
+}
+
+.Eixo h1 {
+    font-family: 'OpenSansBold';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CF89FB;
+    margin: 0 0 0 0
+}
+
+.Disciplina {
+    display: flex;
+    width: calc(100vw - 12.5vw)/4 - 3*3.8vw;
+    height: 29vh;
+    background-color: gray;
+    flex-direction: column;
+}
+
+.Disciplina img {
+    width: 19vw;
+    height: auto;
+    max-height:18.5vh;
+    overflow: hidden;
+    border: none;
+}
+
+.Disciplina p {
+    margin: 2.8vh 0 0 0;
+    display: flex;
+    font-family: 'OpenSansBold';
+    font-size: 1.5vw;
+}
+
+.Disciplina div{
+    display: flex;
+    flex-direction: row;
+}
+
+.Disciplina div p{
+    font-family: 'OpenSansLight';
+    font-size: 1vw;
+    margin: 0;
+}
+
+.Login h2 {
+    font-family: 'OpenSansLight';
+    font-family: 'OpenSansBold';
+    
+    color: #3c3c3c;
+    font-size: 2vw;
+}
+
+.Login h3 {
+    font-family: 'OpenSansLight';
+    color: #3c3c3c;
+    font-size: 1vw;
+    margin-top: -1vh;
+}
+
+.Login a {
+    text-decoration: none;
+}
+
+.LoginPage {
+    margin-left: 5vw;
+}
+
+.LoginMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0vw;
+}
+
+.InputsEndLogin {
+    display: flex;
+    justify-content: end;
+}
+
+.InputsEndLogin a {
+    color: #ffffff;
+}
+
+.InputsEndLogin button {
+    border: none;
+    font-size: 1.5rem;
+    font-family: 'OpenSansBold';
+    color: #ffffff;
+    background-color: #310660;
+    border-radius: 10px;
+    padding: 1.8vh 3vw;
+    margin-bottom: 5vh;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.Login p {
+    text-align: center;
+}
