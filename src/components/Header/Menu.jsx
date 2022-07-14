@@ -22,24 +22,24 @@ const Menu = props => {
         <header>
             <div className="Menu">
                 <div className="LeftMenu">
-                    <a className="Logo"><Link to="/Home">Reco</Link></a>
+                    <p className="Logo"><Link to="/Home">Reco</Link></p>
                     <input type="text" />
-                    <Link to="#">Temas<img className="ArrowDown" src={arrowdown} width="25" height="25" /></Link>
-                    <Link to="#">Testes<img className="ArrowDown" src={arrowdown} width="25" height="25" /></Link>
+                    <Link to="#">Temas<img className="ArrowDown" src={arrowdown} width="20" height="20" /></Link>
+                    <Link to="#">Testes<img className="ArrowDown" src={arrowdown} width="20" height="20" /></Link>
                 </div>
-                <a className="Premium"><Link to="/">Premium</Link></a>
+                <p className="Premium"><Link to="/">Premium</Link></p>
                 <div className="RightMenu">
-                    <a className="Bell"><Link to="/"><img src={bell} width="65" height="65" /></Link></a>
+                    <p className="Bell"><Link to="/"><img className="Bell" src={bell} width="55" height="55" /></Link></p>
                     <button onClick={expandMenuOnClick} className="Read">
-                        <img src={reading} width="65" height="65" />
-                        <img className="ArrowDown" src={arrowdown} width="25" height="25" />
+                        <img src={reading} width="55" height="55" />
+                        <img className="ArrowDown" src={arrowdown} width="20" height="20" />
                     </button>
                 </div>
             </div>
             <div className="ExpandMenu">
                 <div className="ExpandLeft">
                     <h1>Perfil</h1>
-                    <a href="#"><Link to="/About"><h2>Sobre o</h2><h1>Recordum</h1></Link></a>
+                    <Link to="/About"><h2>Sobre o</h2><h1>Recordum</h1></Link>
                 </div>
                 <div className="ExpandMiddle">
                     <div className="InfoPerson">
