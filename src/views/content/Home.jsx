@@ -7,10 +7,7 @@ import Themes from "../../parts/Themes.jsx"
 import './Home.css'
 
 import placeholder from '../../imgs/placeholder.jpg'
-<<<<<<< HEAD
 import backgroundgen from "../../imgs/backgroundgen.png"
-=======
->>>>>>> 3c9aa80 (integracao login e cadastro)
 
 class Home extends Component{
   
