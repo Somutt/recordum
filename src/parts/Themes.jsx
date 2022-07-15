@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Themes.css"
 
@@ -17,7 +18,7 @@ const Themes = props => {
     
     return (
         <div className="Themes">
-            <button style={{ background: color[props.color%7]}}>{props.nome}</button>
+            <button style={{ background: color[props.color%7]}}><Link to={`/eixos/${props.color}?nome=${props.nome}`}>{props.nome}</Link></button>
         </div>
     )
 
